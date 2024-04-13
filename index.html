@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram con Bootstrap </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script> -->
+  <script src="https://kit.fontawesome.com/30dff84beb.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light-subtle">
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <div>
+        <a class="navbar-brand text-warning"><i class="fa-brands fa-instagram fs-2 me-2 link-warning"></i> My Yellow
+          Instagram </a>
+      </div>
+       <!-- comienza Modal y dropdown -->
+      <div class="d-flex">
+        <button class="btn btn-warning me-2 text-white type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Create
+          a new post </button>
+        <div class="dropdown">
+          <button class="btn btn-warning dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-gear text-white"></i>
+          </button>
+         
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5 text-warning" id="exampleModalLabel">Create a new post</h1>
+                  <button type="button border" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="">
+                      <label for="message-text" class="col-form-label text-warning">Caption:</label>
+                      <textarea class="form-control" id="message-text"></textarea>
+                    </div>
+                  </form>
+                </div>
+                <div class="container mb-3">
+                  <button type="button" class="btn btn-outline-warning-emphasis link-warning mx-1"><i
+                      class=" fa-solid fa-camera"></i>
+                  </button>
+                  <button type="button" class="btn btn-outline-warning-emphasis link-warning"><i
+                      class="fa-solid fa-location-dot"></i>
+                  </button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning text-white ta-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-warning text-white">Publish</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item text-warning" href="#">Profile</a></li>
+            <li><a class="dropdown-item text-warning" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item text-warning" href="#">Privacy and data</a></li>
+            <li><a class="dropdown-item text-warning-emphasis border-top" href="#">Log out</a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- comienza Modal y dropdown -->
+    <!-- comienza el que divide la grilla de las imagen carta -->
+    <div class="container">
+      <ul class="nav nav-tabs d-flex justify-content-center w-100" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            <i class="fa-regular fa-square link-warning fs-2 me-2"></i>
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+            type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="true">
+            <i class="fa-solid fa-table-cells link-warning fs-2 me-2"></i>
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content d-flex flex-column w-100 justify-content-center" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab"
+          tabindex="0">
+  <!-- termina el que divide la grilla de las imagen carta -->
+          <!-- comienza grilla de imagen  -->
+          <div class="row mt-4">
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/270/5000/3320.jpg?hmac=0NDjpAv_MPVPTnJS_Fce64DTyLskiZnzwx9Gd9JjPfc"
+                class="img-fluid" alt="Imagen 1">
+            </div>
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/777/3000/2000.jpg?hmac=eThn3HXyQvzcfgnbjnToau3coTsXjSRJxKpfAXifyRo"
+                class="img-fluid" alt="Imagen 2">
+            </div>
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/112/4200/2800.jpg?hmac=8Qhr0ehkFOnlKO__aKhLMQTu2qzcAten9LHpBO6uk-k"
+                class="img-fluid" alt="Imagen 3">
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/641/2509/1673.jpg?hmac=ECuwhiaywfcq8Uz33JwR66SNqYHg5gs-XEh4NzV7uq8"
+                class="img-fluid" alt="Imagen 4">
+            </div>
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/855/5000/3333.jpg?hmac=plFPjVKm__JX994YSgieXxj7LBnlggL0Qd3DGQcfv5E"
+                class="img-fluid" alt="Imagen 5">
+            </div>
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/551/5000/3337.jpg?hmac=j2rbnFFCSL6ssVP1iYHUak_9xhIpAdof4lIf1WZNnww"
+                class="img-fluid" alt="Imagen 6">
+            </div>
+          </div>
+          <div class="row mt-4">
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/428/2529/1581.jpg?hmac=FmX3-15B3BDpSiq3wq-eiTuAZ51CdKcJwrDeRICFCIU"
+                class="img-fluid h-100" alt="Imagen 7">
+            </div>
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/389/4562/3042.jpg?hmac=vnZGl2BO_TMZ7PmMnfvGQ69vNYy4auG7odEZWpc6cOA"
+                class="img-fluid" alt="Imagen 8">
+            </div>
+            <div class="col-12 col-md-4">
+              <img
+                src="https://fastly.picsum.photos/id/419/3456/2304.jpg?hmac=RXPdqWRwlAeofpGH8aDVH7Yz7h2VklC82ppVCx5wnKk"
+                class="img-fluid" alt="Imagen 9">
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+          <!-- termina grilla de imagen -->
+<!-- comienza 1ra carta  -->
+          <div >
+
+            <div class="w-100 mt-4">
+              <div class="card mb-3 fa-bg-warning mx-auto" style="width: 40rem;">
+
+                <div class="card-body d-flex align-items-center">
+                  <i class="fa-regular fa-face-smile fs-1 me-4 link-warning"></i>
+                  <div>
+                    <h2 class="my-0 py-0 fs-3 text-warning"> My Yellow place </h2>
+                  </div>
+                  <div class="d-flex align-items-center ms-auto gap-2">
+                    <p class="my-0 py-0 fs-6 text-warning">09/04/2024</p>
+                    <i class="fa-solid fa-ellipsis-vertical fs-3 link-warning"></i>
+                  </div>
+                </div>
+                <img
+                  src="https://fastly.picsum.photos/id/946/5000/3572.jpg?hmac=o__WbAcVSi9EvwRNEm2Z6vdOF_S5pMuW6L4zuXhsSvM"
+                  class="img-fluid" alt="Imagen 9">
+
+                <div class="card-body">
+                  <div class="mb-3 d-flex">
+                    <i class="fa-regular fa-heart fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-comment fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-paper-plane fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-bookmark fs-4 ms-auto link-warning"></i>
+                  </div>
+                  <p class="lead text-warning">457 likes</p>
+                  <p class="fs-6 text-warning">Quisque mollis tincidunt metus, vel mollis tortor scelerisque at. Donec
+                    eget sodales
+                    felis, ut fermentum ipsum. In non diam in ante congue posuere. Maecenas consectetur ipsum neque, sit
+                    amet dictum neque scelerisque quis. Morbi scelerisque, libero nec blandit porttitor, erat nunc
+                    molestie ipsum, a commodo sem enim sit amet justo. Donec ut lorem interdum, eleifend lorem id,
+                    pellentesque arcu. Integer cursus pellentesque tellus, pretium consequat mi vulputate a.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- termina 1ra carta-->
+            <!-- comienza 2da carta -->
+            <div class="w-100 mt-4">
+              <div class="card mb-3 fa-bg-warning mx-auto" style="width: 40rem;">
+
+                <div class="card-body d-flex align-items-center">
+                  <i class="fa-regular fa-face-smile fs-1 me-4 link-warning"></i>
+                  <div>
+                    <h2 class="my-0 py-0 fs-3 text-warning"> Story of my life </h2>
+                  </div>
+                  <div class="d-flex align-items-center ms-auto gap-2">
+                    <p class="my-0 py-0 fs-6 text-warning">10/04/24</p>
+                    <i class="fa-solid fa-ellipsis-vertical fs-3 link-warning"></i>
+                  </div>
+                </div>
+                <img
+                  src="https://fastly.picsum.photos/id/998/5000/3338.jpg?hmac=yaE-JjQeaQRYhB_8W8mnYhtR_neSbokA38UUjNgxbDw"
+                  class="img-fluid" alt="Imagen 9">
+
+                <div class="card-body">
+                  <div class="mb-3 d-flex">
+                    <i class="fa-regular fa-heart fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-comment fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-paper-plane fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-bookmark fs-4 ms-auto link-warning"></i>
+                  </div>
+                  <p class="lead text-warning">150 likes</p>
+                  <p class="fs-6 text-warning">Quisque mollis tincidunt metus, vel mollis tortor scelerisque at. Donec
+                    eget sodales
+                    felis, ut fermentum ipsum. In non diam in ante congue posuere. Maecenas consectetur ipsum neque, sit
+                    amet dictum neque scelerisque quis. Morbi scelerisque, libero nec blandit porttitor, erat nunc
+                    molestie ipsum, a commodo sem enim sit amet justo. Donec ut lorem interdum, eleifend lorem id,
+                    pellentesque arcu. Integer cursus pellentesque tellus, pretium consequat mi vulputate a.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- termina 2da carta  -->
+            <!-- comienza 3era carta  -->
+            <div class="w-100 mt-4">
+              <div class="card mb-3 fa-bg-warning mx-auto" style="width: 40rem;">
+
+                <div class="card-body d-flex align-items-center">
+                  <i class="fa-regular fa-face-smile fs-1 me-4 link-warning"></i>
+                  <div>
+                    <h2 class="my-0 py-0 fs-3 text-warning">Yellow Natura</h2>
+                  </div>
+                  <div class="d-flex align-items-center ms-auto gap-2">
+                    <p class="my-0 py-0 fs-6 text-warning">11/04/2024</p>
+                    <i class="fa-solid fa-ellipsis-vertical fs-3 link-warning"></i>
+                  </div>
+                </div>
+                <img
+                  src="https://fastly.picsum.photos/id/943/3000/2002.jpg?hmac=GbwwAGwHcOJ5HL17XLMbHLRrVnLuTzadxw43YSktrmA"
+                  class="img-fluid" alt="Imagen 9">
+
+                <div class="card-body">
+                  <div class="mb-3 d-flex">
+                    <i class="fa-regular fa-heart fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-comment fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-paper-plane fs-4 me-2 link-warning"></i>
+                    <i class="fa-regular fa-bookmark fs-4 ms-auto link-warning"></i>
+                  </div>
+                  <p class="lead text-warning">827 likes</p>
+                  <p class="fs-6 text-warning">Quisque mollis tincidunt metus, vel mollis tortor scelerisque at. Donec
+                    eget sodales
+                    felis, ut fermentum ipsum. In non diam in ante congue posuere. Maecenas consectetur ipsum neque, sit
+                    amet dictum neque scelerisque quis. Morbi scelerisque, libero nec blandit porttitor, erat nunc
+                    molestie ipsum, a commodo sem enim sit amet justo. Donec ut lorem interdum, eleifend lorem id,
+                    pellentesque arcu. Integer cursus pellentesque tellus, pretium consequat mi vulputate a.</p>
+                </div>
+              </div>
+            </div>
+            <!-- termina 3 carta  -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
